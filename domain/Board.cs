@@ -15,14 +15,16 @@ namespace Domain
 
     public Board()
     {
-      Row1 = new int[8] { 0,0,0,0,0,0,0,0 };
-      Row2 = new int[8] { 0,0,0,0,0,0,0,0 };
-      Row3 = new int[8] { 0,0,0,0,0,0,0,0 };
+      var emptyRow = new int[8] { 0,0,0,0,0,0,0,0 };
+
+      Row1 = emptyRow;
+      Row2 = emptyRow;
+      Row3 = emptyRow;
       Row4 = new int[8] { 0,0,0,1,2,0,0,0 };
       Row5 = new int[8] { 0,0,0,2,1,0,0,0 };
-      Row6 = new int[8] { 0,0,0,0,0,0,0,0 };
-      Row7 = new int[8] { 0,0,0,0,0,0,0,0 };
-      Row8 = new int[8] { 0,0,0,0,0,0,0,0 };
+      Row6 = emptyRow;
+      Row7 = emptyRow;
+      Row8 = emptyRow;
     }
   }
 }
