@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Domain;
 using NUnit.Framework;
 
@@ -27,8 +29,27 @@ namespace Tests
         {
             var game = new Game();
 
-            Assert.That(game.Turn, Is.EqualTo("white"));
+            Assert.That(game.Turn, Is.EqualTo(1));
         }
 
+        [Test]
+        public void Find_opponents_first_piece_in_row()
+        {
+            var game = new Game();
+
+            var row = new int[1] { 2 };
+
+            Assert.That(game.OpponentsFirstPiece(row), Is.EqualTo(1));
+        }
+
+        [Test]
+        public void Find_opponents_first_piece_in_row_of_multiple_pieces()
+        {
+            var game = new Game();
+
+            var row = new int[2] { 1, 2 };
+
+            Assert.That(game.OpponentsFirstPiece(row), Is.EqualTo(2));
+        }
     }
 }
